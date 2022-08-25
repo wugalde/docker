@@ -17,5 +17,8 @@ app.get('/', (req, res) => {
     }
   });
 });
+app.get('/say', (req, res) => {
+  res.status(200).send('Hola mundo cruel !💥!')
+});
 
 app.listen(port, () => console.log(`Server listening on port ${port}!`))
