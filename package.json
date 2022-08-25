@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/walter.ugalde/docker-lab002.git"
+    "url": "git+https://github.com/wugalde/docker/tree/main"
   },
-  "author": "gvilarino",
+  "author": "Walter Ugalde",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/walter.ugalde/docker-lab002/issues"
+    "url": "https://github.com/wugalde/docker/tree/main/issues"
   },
-  "homepage": "https://github.com/walter.ugalde/docker-lab002#readme",
+  "homepage": "https://github.com/wugalde/docker/tree/main#readme",
   "dependencies": {
     "express": "4.16.4",
     "mongodb": "3.1.9"
