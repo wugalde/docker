@@ -28,3 +28,7 @@
     docker compose down
 
 
+# Docker build
+    docker compose  build
+    docker tag f85303d70b6d lab08:v1.0
+    docker compose up -d
