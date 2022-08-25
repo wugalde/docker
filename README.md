@@ -1,2 +1,3 @@
-# docker
-Proyectos de Docker las
+# Lab 001
+* Crear una imagen de docker para conectar servicios.
+
