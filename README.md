@@ -20,3 +20,11 @@
     docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://dbm:27017/test lab08:v1.0
     docker network connect lab08 app
     
+# Docker compose
+    docker compose up -d
+    docker comose logs -f app
+    docker compose exec app bash
+    docker compose ps
+    docker compose down
+
+
