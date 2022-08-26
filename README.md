@@ -22,6 +22,8 @@
         * Para solucionar el error hay que definir un rango de puertos, en mi caso no levanto el primier contendor.
             ports:
                 - "3000-3001:3000"
-
+    6. Limitar el uso de memoria del procesador.
+        docker run -d --name app --memory 1g lab08:v1.1
+        
 # Docker compose override Lab 09
     fig-docker-compose 
