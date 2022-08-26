@@ -1,30 +1,40 @@
-# Lab 001
-* Crear una imagen de docker para conectar servicios.
-* http://localhost:3000
+# Lab 04
+* Crear el archivo llamado docker-compose.yml
+* Agregar el codigo, el siguiente codigo.
+```
+# Version del docker compose, siempre 
+version: "3.8"
 
-## Comandos
-    docker build -t lab08:v1.0 .
-    docker run --rm -p 3000:3000 lab08:v1.0
-* Correr el contenedor para que vea los cambios realizados
-    docker run  --rm -p 3000:3000 -v $PWD/index.js:/usr/src/index.js lab08:v1.0
+services:
+  app:
+    image: lab08:v1.0
+    environment:
+      MONGO_URL: "mongodb://db:27017/test"
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
 
+  db:
+    image: mongo
+```
 
-# docker y redes
-    docker network ls
-    docker network create --attachable lab08  
-    docker network inspect lab08
-
-# Contenedores que usen la red.
-    docker run -d --name dbm mongo
-    docker network connect lab08 dbm
-    docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://dbm:27017/test lab08:v1.0
-    docker network connect lab08 app
     
-# Docker compose
+# Docker compose commad.
+  1. Ejecuta el compose, crea los contenedores y ls levanta.  
     docker compose up -d
+
+  2. Ver los logs que genera el contenedor del app 
     docker comose logs -f app
+
+  3. Ingresar al contenedor del app
     docker compose exec app bash
+
+  3. Ver los procesos de los contenedores  
     docker compose ps
+
+  4. Baja los contenedores y los elimona
     docker compose down
 
-
+# Probar la app
+* http://localhost:3000
